@@ -15,6 +15,7 @@ public class SC_FPSController : MonoBehaviour
     public float lookXLimit = 45.0f;
     public GameObject gameCanvas;
     public bool gcActive;
+    public int Scans, Extractions;
 
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
@@ -25,6 +26,7 @@ public class SC_FPSController : MonoBehaviour
 
     void Start()
     {
+        Scans = 6;
         characterController = GetComponent<CharacterController>();
         //gameCanvas.SetActive(false);
         // Lock cursor
@@ -65,12 +67,15 @@ public class SC_FPSController : MonoBehaviour
         characterController.Move(moveDirection * Time.deltaTime);
 
         // Player and Camera rotation
-        if (canMove)
+        if (!gcActive)
         {
-            rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
-            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+            if (canMove)
+            {
+                rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
+                rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+                playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+                transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+            }
         }
 
         if (gcActive)

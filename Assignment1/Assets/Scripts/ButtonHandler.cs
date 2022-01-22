@@ -9,9 +9,13 @@ public class ButtonHandler : MonoBehaviour
     public GameObject neightbour0, neightbour1, neightbour2, neightbour3, neightbour4, neightbour5, neightbour6, neightbour7;
     int nID0, nID1, nID2, nID3, nID4, nID5, nID6, nID7;
     public Button self;
+    public SC_FPSController playerController;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerController = player.GetComponent<SC_FPSController>();
         self = gameObject.GetComponent<Button>();
         self.onClick.AddListener(onClick);
         ID = int.Parse(gameObject.name);
@@ -102,39 +106,44 @@ public class ButtonHandler : MonoBehaviour
 
     void onClick()
     {
-        if(neightbour0 != null)
+      
+        if (playerController.Scans > 0)
         {
-            neightbour0.SetActive(false);
+            if (neightbour0 != null)
+            {
+                neightbour0.SetActive(false);
+            }
+            if (neightbour1 != null)
+            {
+                neightbour1.SetActive(false);
+            }
+            if (neightbour2 != null)
+            {
+                neightbour2.SetActive(false);
+            }
+            if (neightbour3 != null)
+            {
+                neightbour3.SetActive(false);
+            }
+            if (neightbour4 != null)
+            {
+                neightbour4.SetActive(false);
+            }
+            if (neightbour5 != null)
+            {
+                neightbour5.SetActive(false);
+            }
+            if (neightbour6 != null)
+            {
+                neightbour6.SetActive(false);
+            }
+            if (neightbour7 != null)
+            {
+                neightbour7.SetActive(false);
+            }
+            gameObject.SetActive(false);
+            playerController.Scans--;
         }
-        if (neightbour1 != null)
-        {
-            neightbour1.SetActive(false);
-        }
-        if (neightbour2 != null)
-        {
-            neightbour2.SetActive(false);
-        }
-        if (neightbour3 != null)
-        {
-            neightbour3.SetActive(false);
-        }
-        if (neightbour4 != null)
-        {
-            neightbour4.SetActive(false);
-        }
-        if (neightbour5 != null)
-        {
-            neightbour5.SetActive(false);
-        }
-        if (neightbour6 != null)
-        {
-            neightbour6.SetActive(false);
-        }
-        if (neightbour7 != null)
-        {
-            neightbour7.SetActive(false);
-        }
-        gameObject.SetActive(false);
 
     }
 
