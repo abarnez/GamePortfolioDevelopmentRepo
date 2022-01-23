@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CharacterController))]
 
@@ -14,8 +15,9 @@ public class SC_FPSController : MonoBehaviour
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
     public GameObject gameCanvas;
-    public bool gcActive;
+    public bool gcActive, ScanMode, ExtractMode;
     public int Scans, Extractions;
+    public Text buttonText, scansText;
 
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
@@ -30,12 +32,15 @@ public class SC_FPSController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         //gameCanvas.SetActive(false);
         // Lock cursor
-      //  Cursor.lockState = CursorLockMode.Locked;
-      //  Cursor.visible = false;
+        //  Cursor.lockState = CursorLockMode.Locked;
+        //  Cursor.visible = false;
+        ScanMode = false;
+        ExtractMode = true;
     }
 
     void Update()
     {
+        scansText.text = "Scans Remaining: " + Scans;
         // We are grounded, so recalculate move direction based on axes
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
@@ -91,5 +96,21 @@ public class SC_FPSController : MonoBehaviour
         {
             gcActive = !gcActive;
         }
+
+        if (ExtractMode)
+        {
+            buttonText.text = "Extract Mode";
+        }
+
+        if (ScanMode)
+        {
+            buttonText.text = "Scan Mode";
+        }
+    }
+
+    public void changeMode()
+    {
+        ScanMode = !ScanMode;
+        ExtractMode = !ExtractMode;
     }
 }
