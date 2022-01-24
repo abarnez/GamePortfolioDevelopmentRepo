@@ -11,9 +11,15 @@ public class ButtonHandler : MonoBehaviour
     public Button self;
     public SC_FPSController playerController;
     public GameObject player;
+    public int value;
     // Start is called before the first frame update
     void Start()
     {
+        value = Random.Range(0, 3);
+        if(value == 1)
+        {
+            gameObject.GetComponent<Image>().color = Color.cyan;
+        }
         player = GameObject.FindGameObjectWithTag("Player");
         playerController = player.GetComponent<SC_FPSController>();
         self = gameObject.GetComponent<Button>();
@@ -111,37 +117,40 @@ public class ButtonHandler : MonoBehaviour
         {
             if (neightbour0 != null)
             {
-                neightbour0.SetActive(false);
+                // neightbour0.SetActive(false);
+               // neightbour0.GetComponent<Image>().enabled = false;
+              //  neightbour0.GetComponentInChildren<Image>().enabled = false;
+                neightbour0.transform.GetChild(0).gameObject.SetActive(false);
             }
             if (neightbour1 != null)
             {
-                neightbour1.SetActive(false);
+                neightbour1.transform.GetChild(0).gameObject.SetActive(false);
             }
             if (neightbour2 != null)
             {
-                neightbour2.SetActive(false);
+                neightbour2.transform.GetChild(0).gameObject.SetActive(false);
             }
             if (neightbour3 != null)
             {
-                neightbour3.SetActive(false);
+                neightbour3.transform.GetChild(0).gameObject.SetActive(false);
             }
             if (neightbour4 != null)
             {
-                neightbour4.SetActive(false);
+                neightbour4.transform.GetChild(0).gameObject.SetActive(false);
             }
             if (neightbour5 != null)
             {
-                neightbour5.SetActive(false);
+                neightbour5.transform.GetChild(0).gameObject.SetActive(false);
             }
             if (neightbour6 != null)
             {
-                neightbour6.SetActive(false);
+                neightbour6.transform.GetChild(0).gameObject.SetActive(false);
             }
             if (neightbour7 != null)
             {
-                neightbour7.SetActive(false);
+                neightbour7.transform.GetChild(0).gameObject.SetActive(false);
             }
-            gameObject.SetActive(false);
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
             playerController.Scans--;
         }
 
