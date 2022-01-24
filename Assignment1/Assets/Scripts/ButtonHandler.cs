@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class ButtonHandler : MonoBehaviour
 {
     public int ID;
-    public GameObject neightbour0, neightbour1, neightbour2, neightbour3, neightbour4, neightbour5, neightbour6, neightbour7;
-    int nID0, nID1, nID2, nID3, nID4, nID5, nID6, nID7;
+    public GameObject neightbour0, neightbour1, neightbour2, neightbour3, neightbour4, neightbour5, neightbour6, neightbour7, neightbour8, neightbour9, neightbour10, neightbour11, neightbour12, neightbour13, neightbour14, neightbour15, neightbour16, neightbour17, neightbour18, neightbour19, neightbour20, neightbour21, neightbour22, neightbour23;
+    int nID0, nID1, nID2, nID3, nID4, nID5, nID6, nID7, nID8, nID9, nID10, nID11, nID12, nID13, nID14, nID15, nID16, nID17, nID18, nID19, nID20, nID21, nID22, nID23;
     public Button self;
     public SC_FPSController playerController;
     public GameObject player;
@@ -15,11 +15,8 @@ public class ButtonHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        value = Random.Range(0, 3);
-        if(value == 1)
-        {
-            gameObject.GetComponent<Image>().color = Color.cyan;
-        }
+        
+     
         player = GameObject.FindGameObjectWithTag("Player");
         playerController = player.GetComponent<SC_FPSController>();
         self = gameObject.GetComponent<Button>();
@@ -33,9 +30,25 @@ public class ButtonHandler : MonoBehaviour
         nID5 = ID + 31;
         nID6 = ID + 32;
         nID7 = ID + 33;
+        nID8 = ID - 66;
+        nID9 = ID -65;
+        nID10 = ID - 64;
+        nID11 = ID - 63;
+        nID12 = ID - 62;
+        nID13 = ID - 34;
+        nID14 = ID - 30;
+        nID15 = ID - 2;
+        nID16 = ID + 2;
+        nID17 = ID + 30;
+        nID18 = ID + 34;
+        nID19 = ID + 62;
+        nID20 = ID + 63;
+        nID21 = ID + 64;
+        nID22 = ID + 65;
+        nID23 = ID + 66;
 
       
-
+        //top row
         if (ID < 32 && ID >= 2)
         {
        
@@ -46,13 +59,14 @@ public class ButtonHandler : MonoBehaviour
             neightbour7 = GameObject.Find("" + nID7);
         }
     
-            
+        //first    
         if (ID == 1)
         {
             neightbour4 = GameObject.Find("" + nID4);
             neightbour6 = GameObject.Find("" + nID6);
             neightbour7 = GameObject.Find("" + nID7);
         }
+        //last on top
         if (ID == 32)
         {
             neightbour3 = GameObject.Find("" + nID3);
@@ -70,6 +84,7 @@ public class ButtonHandler : MonoBehaviour
             neightbour6 = GameObject.Find("" + nID6);
             neightbour7 = GameObject.Find("" + nID7);
         }
+        //left collum
         for (int i = 0; i < 32; i++)
         {
             if (ID == 1 + 32 * i)
@@ -85,6 +100,7 @@ public class ButtonHandler : MonoBehaviour
                 neightbour7 = GameObject.Find("" + nID7);
             }
         }
+        //right collum
         for (int i = 0; i < 33; i++)
         {
             if (ID == 0 + 32 * i)
@@ -101,6 +117,11 @@ public class ButtonHandler : MonoBehaviour
                 neightbour7 = null;
 
             }
+        }
+        if (value == 100)
+        {
+            populateNeighborsValue();
+            gameObject.GetComponent<Image>().color = Color.cyan;
         }
     }
 
@@ -156,5 +177,124 @@ public class ButtonHandler : MonoBehaviour
 
     }
 
+    void populateNeighborsValue()
+    {
+        //first
+        if (ID == 1)
+        { 
+            neightbour16 = GameObject.Find("" + nID16);
+            neightbour18 = GameObject.Find("" + nID8);
+            neightbour21 = GameObject.Find("" + nID21);
+            neightbour22 = GameObject.Find("" + nID22);
+            neightbour23 = GameObject.Find("" + nID23);
+        }
+        //last top
+        if (ID == 32)
+        {
+            neightbour15 = GameObject.Find("" + nID3);
+            neightbour17 = GameObject.Find("" + nID5);
+            neightbour19 = GameObject.Find("" + nID6);
+            neightbour20 = GameObject.Find("" + nID5);
+            neightbour21 = GameObject.Find("" + nID6);
+        }
+        //top without first and last 2
+        if (ID < 31 && ID >= 3)
+        {
+
+            neightbour15 = GameObject.Find("" + nID15);
+            neightbour16 = GameObject.Find("" + nID16);
+            neightbour17 = GameObject.Find("" + nID17);
+            neightbour18 = GameObject.Find("" + nID18);
+            neightbour19 = GameObject.Find("" + nID19);
+            neightbour20 = GameObject.Find("" + nID20);
+            neightbour21 = GameObject.Find("" + nID21);
+            neightbour22 = GameObject.Find("" + nID22);
+            neightbour23 = GameObject.Find("" + nID23);
+ 
+        }
+        //right collum without first or last 2
+        for (int i = 2; i < 31; i++)
+        {
+            if (ID == 0 + 32 * i)
+            {
+
+
+                neightbour8 = GameObject.Find("" + nID8);
+                neightbour9 = GameObject.Find("" + nID9);
+                neightbour10 = GameObject.Find("" + nID10);
+                neightbour13 = GameObject.Find("" + nID13);
+                neightbour15 = GameObject.Find("" + nID15);
+                neightbour17 = GameObject.Find("" + nID17);
+                neightbour19 = GameObject.Find("" + nID19);
+                neightbour20 = GameObject.Find("" + nID20);
+                neightbour21 = GameObject.Find("" + nID21);
+
+            }
+        }
+        //left without first or last 2
+        for (int i = 3; i < 30; i++)
+        {
+            if (ID == 1 + 32 * i)
+            {
+                //Debug.Log(1 + 32 * i);
+                neightbour10 = GameObject.Find("" + nID10);
+                neightbour11 = GameObject.Find("" + nID11);
+                neightbour12 = GameObject.Find("" + nID12);
+                neightbour14 = GameObject.Find("" + nID14);
+                neightbour16 = GameObject.Find("" + nID16);
+                neightbour18 = GameObject.Find("" + nID18);
+                neightbour21 = GameObject.Find("" + nID21);
+                neightbour22 = GameObject.Find("" + nID22);
+                neightbour23 = GameObject.Find("" + nID23);
+            }
+        }
+        if (ID == 34)
+        {
+            neightbour14 = GameObject.Find("" + nID14);
+            neightbour16 = GameObject.Find("" + nID16);
+            neightbour18 = GameObject.Find("" + nID18);
+            neightbour20 = GameObject.Find("" + nID20);
+            neightbour21 = GameObject.Find("" + nID21);
+            neightbour22 = GameObject.Find("" + nID22);
+            neightbour23 = GameObject.Find("" + nID23);
+        }
+        if (ID == 63)
+        {
+            neightbour13 = GameObject.Find("" + nID13);
+            neightbour16 = GameObject.Find("" + nID16);
+            neightbour18 = GameObject.Find("" + nID18);
+            neightbour20 = GameObject.Find("" + nID20);
+            neightbour21 = GameObject.Find("" + nID21);
+            neightbour22 = GameObject.Find("" + nID22);
+            neightbour23 = GameObject.Find("" + nID23);
+        }
+        if (ID == 962)
+        {
+            neightbour9 = GameObject.Find("" + nID9);
+            neightbour10 = GameObject.Find("" + nID10);
+            neightbour11 = GameObject.Find("" + nID11);
+            neightbour12 = GameObject.Find("" + nID12);
+            neightbour14 = GameObject.Find("" + nID14);
+            neightbour16 = GameObject.Find("" + nID16);
+            neightbour18 = GameObject.Find("" + nID18);
+        }
+        //second from top without first and last 2
+        if (ID < 63 && ID >= 34)
+        {
+
+            neightbour13 = GameObject.Find("" + nID13);
+            neightbour14 = GameObject.Find("" + nID14);
+            neightbour15 = GameObject.Find("" + nID15);
+            neightbour16 = GameObject.Find("" + nID16);
+            neightbour17 = GameObject.Find("" + nID17);
+            neightbour18 = GameObject.Find("" + nID18);
+            neightbour19 = GameObject.Find("" + nID19);
+            neightbour20 = GameObject.Find("" + nID20);
+            neightbour21 = GameObject.Find("" + nID21);
+            neightbour22 = GameObject.Find("" + nID22);
+            neightbour23 = GameObject.Find("" + nID23);
+
+        }
+    }
 
 }
