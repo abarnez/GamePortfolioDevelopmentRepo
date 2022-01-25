@@ -105,7 +105,7 @@ public class ButtonHandler : MonoBehaviour
         {
             if (ID == 0 + 32 * i)
             {
-                Debug.Log(0 + 32 * i);
+                //Debug.Log(0 + 32 * i);
 
                 neightbour0 = GameObject.Find("" + nID0);
                 neightbour1 = GameObject.Find("" + nID1);
@@ -183,19 +183,56 @@ public class ButtonHandler : MonoBehaviour
         if (ID == 1)
         { 
             neightbour16 = GameObject.Find("" + nID16);
-            neightbour18 = GameObject.Find("" + nID8);
+            neightbour18 = GameObject.Find("" + nID18);
             neightbour21 = GameObject.Find("" + nID21);
             neightbour22 = GameObject.Find("" + nID22);
             neightbour23 = GameObject.Find("" + nID23);
         }
+        if (ID == 2)
+        {
+            neightbour16 = GameObject.Find("" + nID16);
+            neightbour18 = GameObject.Find("" + nID18);
+            neightbour20 = GameObject.Find("" + nID20);
+            neightbour21 = GameObject.Find("" + nID21);
+            neightbour22 = GameObject.Find("" + nID22);
+            neightbour23 = GameObject.Find("" + nID23);
+        }
+        if (ID == 31)
+        {
+            neightbour15 = GameObject.Find("" + nID15);
+            neightbour17 = GameObject.Find("" + nID17);
+            neightbour19 = GameObject.Find("" + nID19);
+            neightbour20 = GameObject.Find("" + nID20);
+            neightbour21 = GameObject.Find("" + nID21);
+            neightbour22 = GameObject.Find("" + nID22);
+            neightbour22 = GameObject.Find("" + nID23);
+        }
         //last top
         if (ID == 32)
         {
-            neightbour15 = GameObject.Find("" + nID3);
-            neightbour17 = GameObject.Find("" + nID5);
-            neightbour19 = GameObject.Find("" + nID6);
-            neightbour20 = GameObject.Find("" + nID5);
-            neightbour21 = GameObject.Find("" + nID6);
+            neightbour15 = GameObject.Find("" + nID15);
+            neightbour17 = GameObject.Find("" + nID17);
+            neightbour19 = GameObject.Find("" + nID19);
+            neightbour20 = GameObject.Find("" + nID20);
+            neightbour21 = GameObject.Find("" + nID21);
+        }
+        if (ID == 33)
+        {
+            neightbour14 = GameObject.Find("" + nID14);
+            neightbour16 = GameObject.Find("" + nID16);
+            neightbour18 = GameObject.Find("" + nID18);
+            neightbour21 = GameObject.Find("" + nID21);
+            neightbour22 = GameObject.Find("" + nID22);
+            neightbour23 = GameObject.Find("" + nID23);
+        }
+        if (ID == 64)
+        {
+            neightbour13 = GameObject.Find("" + nID13);
+            neightbour15 = GameObject.Find("" + nID15);
+            neightbour17 = GameObject.Find("" + nID17);
+            neightbour19 = GameObject.Find("" + nID19);
+            neightbour20 = GameObject.Find("" + nID20);
+            neightbour21 = GameObject.Find("" + nID21);
         }
         //top without first and last 2
         if (ID < 31 && ID >= 3)
@@ -231,6 +268,24 @@ public class ButtonHandler : MonoBehaviour
 
             }
         }
+        //second from right collum without first or last 2
+         for (int i = 0; i < 28; i++)
+            {
+            if (ID == 95 + 32 * i)
+            {
+                neightbour8 = GameObject.Find("" + nID8);
+                neightbour9 = GameObject.Find("" + nID9);
+                neightbour10 = GameObject.Find("" + nID10);
+                neightbour11 = GameObject.Find("" + nID11);
+                neightbour13 = GameObject.Find("" + nID13);
+                neightbour15 = GameObject.Find("" + nID15);
+                neightbour17 = GameObject.Find("" + nID17);
+                neightbour19 = GameObject.Find("" + nID19);
+                neightbour20 = GameObject.Find("" + nID20);
+                neightbour21 = GameObject.Find("" + nID21);
+                neightbour22 = GameObject.Find("" + nID22);
+            }
+        }
         //left without first or last 2
         for (int i = 3; i < 30; i++)
         {
@@ -248,6 +303,26 @@ public class ButtonHandler : MonoBehaviour
                 neightbour23 = GameObject.Find("" + nID23);
             }
         }
+        //second from left without first or last 2
+        for (int i = 2; i < 30; i++)
+        {
+            if (ID == 2 + 32 * i)
+            {
+                //Debug.Log(1 + 32 * i);
+                neightbour9 = GameObject.Find("" + nID9);
+                neightbour10 = GameObject.Find("" + nID10);
+                neightbour11 = GameObject.Find("" + nID11);
+                neightbour12 = GameObject.Find("" + nID12);
+                neightbour14 = GameObject.Find("" + nID14);
+                neightbour16 = GameObject.Find("" + nID16);
+                neightbour18 = GameObject.Find("" + nID18);
+                neightbour20 = GameObject.Find("" + nID20);
+                neightbour21 = GameObject.Find("" + nID21);
+                neightbour22 = GameObject.Find("" + nID22);
+                neightbour23 = GameObject.Find("" + nID23);
+            }
+        }
+
         if (ID == 34)
         {
             neightbour14 = GameObject.Find("" + nID14);
@@ -268,6 +343,15 @@ public class ButtonHandler : MonoBehaviour
             neightbour22 = GameObject.Find("" + nID22);
             neightbour23 = GameObject.Find("" + nID23);
         }
+        if (ID == 961)
+        {
+            neightbour10 = GameObject.Find("" + nID10);
+            neightbour11 = GameObject.Find("" + nID11);
+            neightbour12 = GameObject.Find("" + nID12);
+            neightbour14 = GameObject.Find("" + nID14);
+            neightbour16 = GameObject.Find("" + nID16);
+            neightbour18 = GameObject.Find("" + nID18);
+        }
         if (ID == 962)
         {
             neightbour9 = GameObject.Find("" + nID9);
@@ -278,10 +362,64 @@ public class ButtonHandler : MonoBehaviour
             neightbour16 = GameObject.Find("" + nID16);
             neightbour18 = GameObject.Find("" + nID18);
         }
+        if (ID == 991)
+        {
+            neightbour8 = GameObject.Find("" + nID8);
+            neightbour9 = GameObject.Find("" + nID9);
+            neightbour10 = GameObject.Find("" + nID10);
+            neightbour11 = GameObject.Find("" + nID11);
+            neightbour13 = GameObject.Find("" + nID13);
+            neightbour15 = GameObject.Find("" + nID15);
+            neightbour17 = GameObject.Find("" + nID17);
+      
+        }
+        if (ID == 992)
+        {
+            neightbour8 = GameObject.Find("" + nID8);
+            neightbour9 = GameObject.Find("" + nID9);
+            neightbour10 = GameObject.Find("" + nID10);
+            neightbour13 = GameObject.Find("" + nID13);
+            neightbour15 = GameObject.Find("" + nID15);
+            neightbour17 = GameObject.Find("" + nID17);
+
+        }
+        if (ID == 993)
+        {         
+            neightbour10 = GameObject.Find("" + nID10);
+            neightbour11 = GameObject.Find("" + nID11);
+            neightbour12 = GameObject.Find("" + nID12);
+            neightbour14 = GameObject.Find("" + nID14);
+            neightbour16 = GameObject.Find("" + nID16);          
+        }
+        if (ID == 994)
+        {
+            neightbour9 = GameObject.Find("" + nID9);
+            neightbour10 = GameObject.Find("" + nID10);
+            neightbour11 = GameObject.Find("" + nID11);
+            neightbour12 = GameObject.Find("" + nID12);
+            neightbour14 = GameObject.Find("" + nID14);
+            neightbour16 = GameObject.Find("" + nID16);
+        }
+        if (ID == 1023)
+        {
+            neightbour8 = GameObject.Find("" + nID8);
+            neightbour9 = GameObject.Find("" + nID9);
+            neightbour10 = GameObject.Find("" + nID10);
+            neightbour11 = GameObject.Find("" + nID11);
+            neightbour13 = GameObject.Find("" + nID13);
+            neightbour15 = GameObject.Find("" + nID15);
+        }
+        if (ID == 1024)
+        {
+            neightbour8 = GameObject.Find("" + nID8);
+            neightbour9 = GameObject.Find("" + nID9);
+            neightbour10 = GameObject.Find("" + nID10);       
+            neightbour13 = GameObject.Find("" + nID13);
+            neightbour15 = GameObject.Find("" + nID15);
+        }
         //second from top without first and last 2
         if (ID < 63 && ID >= 34)
         {
-
             neightbour13 = GameObject.Find("" + nID13);
             neightbour14 = GameObject.Find("" + nID14);
             neightbour15 = GameObject.Find("" + nID15);
@@ -293,7 +431,6 @@ public class ButtonHandler : MonoBehaviour
             neightbour21 = GameObject.Find("" + nID21);
             neightbour22 = GameObject.Find("" + nID22);
             neightbour23 = GameObject.Find("" + nID23);
-
         }
     }
 
