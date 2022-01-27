@@ -417,6 +417,32 @@ public class ButtonHandler : MonoBehaviour
             neightbour13 = GameObject.Find("" + nID13);
             neightbour15 = GameObject.Find("" + nID15);
         }
+        if (ID < 1023 && ID >= 994)
+        {
+            neightbour8 = GameObject.Find("" + nID8);
+            neightbour9 = GameObject.Find("" + nID9);
+            neightbour10 = GameObject.Find("" + nID10);
+            neightbour11 = GameObject.Find("" + nID11);
+            neightbour12 = GameObject.Find("" + nID12);
+            neightbour13 = GameObject.Find("" + nID13);
+            neightbour14 = GameObject.Find("" + nID14);
+            neightbour15 = GameObject.Find("" + nID15);
+            neightbour16 = GameObject.Find("" + nID16);
+        }
+        if (ID < 991 && ID >= 962)
+        {
+            neightbour8 = GameObject.Find("" + nID8);
+            neightbour9 = GameObject.Find("" + nID9);
+            neightbour10 = GameObject.Find("" + nID10);
+            neightbour11 = GameObject.Find("" + nID11);
+            neightbour12 = GameObject.Find("" + nID12);
+            neightbour13 = GameObject.Find("" + nID13);
+            neightbour14 = GameObject.Find("" + nID14);
+            neightbour15 = GameObject.Find("" + nID15);
+            neightbour16 = GameObject.Find("" + nID16);
+            neightbour17 = GameObject.Find("" + nID17);
+            neightbour18 = GameObject.Find("" + nID18);
+        }
         //second from top without first and last 2
         if (ID < 63 && ID >= 34)
         {

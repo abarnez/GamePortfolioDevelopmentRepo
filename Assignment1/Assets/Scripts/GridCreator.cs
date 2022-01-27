@@ -12,9 +12,9 @@ public class GridCreator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < 28; i++)
         {
-            Debug.Log(i);
+            Debug.Log(i + 995);
         }
             //rand1 = Random.Range(2,65);  
             rand1 = 1; 
