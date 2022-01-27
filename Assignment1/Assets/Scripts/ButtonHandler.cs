@@ -14,9 +14,7 @@ public class ButtonHandler : MonoBehaviour
     public int value;
     // Start is called before the first frame update
     void Start()
-    {
-        
-     
+    {            
         player = GameObject.FindGameObjectWithTag("Player");
         playerController = player.GetComponent<SC_FPSController>();
         self = gameObject.GetComponent<Button>();
@@ -50,8 +48,7 @@ public class ButtonHandler : MonoBehaviour
       
         //top row
         if (ID < 32 && ID >= 2)
-        {
-       
+        {       
             neightbour3 = GameObject.Find("" + nID3);
             neightbour4 = GameObject.Find("" + nID4);
             neightbour5 = GameObject.Find("" + nID5);
@@ -123,12 +120,20 @@ public class ButtonHandler : MonoBehaviour
             populateNeighborsValue();
             gameObject.GetComponent<Image>().color = Color.cyan;
         }
+    
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (value == 50)
+        {
+            gameObject.GetComponent<Image>().color = Color.blue;
+        }
+        if (value == 25)
+        {
+            gameObject.GetComponent<Image>().color = Color.magenta;
+        }
     }
 
     void onClick()
@@ -457,6 +462,144 @@ public class ButtonHandler : MonoBehaviour
             neightbour21 = GameObject.Find("" + nID21);
             neightbour22 = GameObject.Find("" + nID22);
             neightbour23 = GameObject.Find("" + nID23);
+        } else
+        {
+            neightbour8 = GameObject.Find("" + nID8);
+            neightbour9 = GameObject.Find("" + nID9);
+            neightbour10 = GameObject.Find("" + nID10);
+            neightbour11 = GameObject.Find("" + nID11);
+            neightbour12 = GameObject.Find("" + nID12);
+            neightbour13 = GameObject.Find("" + nID13);
+            neightbour14 = GameObject.Find("" + nID14);
+            neightbour15 = GameObject.Find("" + nID15);
+            neightbour16 = GameObject.Find("" + nID16);
+            neightbour17 = GameObject.Find("" + nID17);
+            neightbour18 = GameObject.Find("" + nID18);
+            neightbour19 = GameObject.Find("" + nID19);
+            neightbour20 = GameObject.Find("" + nID20);
+            neightbour21 = GameObject.Find("" + nID21);
+            neightbour22 = GameObject.Find("" + nID22);
+            neightbour23 = GameObject.Find("" + nID23);
+        }
+        if(neightbour0 != null)
+        {
+            ButtonHandler n0h = neightbour0.GetComponent<ButtonHandler>();
+            n0h.value = 50;
+        }
+        if (neightbour1 != null)
+        {
+            ButtonHandler n0h = neightbour1.GetComponent<ButtonHandler>();
+            n0h.value = 50;
+        }
+        if (neightbour2 != null)
+        {
+            ButtonHandler n0h = neightbour2.GetComponent<ButtonHandler>();
+            n0h.value = 50;
+        }
+        if (neightbour3 != null)
+        {
+            ButtonHandler n0h = neightbour3.GetComponent<ButtonHandler>();
+            n0h.value = 50;
+        }
+        if (neightbour4 != null)
+        {
+            ButtonHandler n0h = neightbour4.GetComponent<ButtonHandler>();
+            n0h.value = 50;
+        }
+        if (neightbour5 != null)
+        {
+            ButtonHandler n0h = neightbour5.GetComponent<ButtonHandler>();
+            n0h.value = 50;
+        }
+        if (neightbour6 != null)
+        {
+            ButtonHandler n0h = neightbour6.GetComponent<ButtonHandler>();
+            n0h.value = 50;
+        }
+        if (neightbour7 != null)
+        {
+            ButtonHandler n0h = neightbour7.GetComponent<ButtonHandler>();
+            n0h.value = 50;
+        }
+        if (neightbour9 != null)
+        {
+            ButtonHandler n0h = neightbour9.GetComponent<ButtonHandler>();
+            n0h.value = 25;
+        }
+        if (neightbour10 != null)
+        {
+            ButtonHandler n0h = neightbour10.GetComponent<ButtonHandler>();
+            n0h.value = 25;
+        }
+        if (neightbour11 != null)
+        {
+            ButtonHandler n0h = neightbour11.GetComponent<ButtonHandler>();
+            n0h.value = 25;
+        }
+        if (neightbour12 != null)
+        {
+            ButtonHandler n0h = neightbour12.GetComponent<ButtonHandler>();
+            n0h.value = 25;
+        }
+        if (neightbour13 != null)
+        {
+            ButtonHandler n0h = neightbour13.GetComponent<ButtonHandler>();
+            n0h.value = 25;
+        }
+        if (neightbour14 != null)
+        {
+            ButtonHandler n0h = neightbour14.GetComponent<ButtonHandler>();
+            n0h.value = 25;
+        }
+        if (neightbour15 != null)
+        {
+            ButtonHandler n0h = neightbour15.GetComponent<ButtonHandler>();
+            n0h.value = 25;
+        }
+        if (neightbour16 != null)
+        {
+            ButtonHandler n0h = neightbour16.GetComponent<ButtonHandler>();
+            n0h.value = 25;
+        }
+        if (neightbour17 != null)
+        {
+            ButtonHandler n0h = neightbour17.GetComponent<ButtonHandler>();
+            n0h.value = 25;
+        }
+        if (neightbour18 != null)
+        {
+            ButtonHandler n0h = neightbour18.GetComponent<ButtonHandler>();
+            n0h.value = 25;
+        }
+        if (neightbour19 != null)
+        {
+            ButtonHandler n0h = neightbour19.GetComponent<ButtonHandler>();
+            n0h.value = 25;
+        }
+        if (neightbour20 != null)
+        {
+            ButtonHandler n0h = neightbour20.GetComponent<ButtonHandler>();
+            n0h.value = 25;
+        }
+        if (neightbour21 != null)
+        {
+            ButtonHandler n0h = neightbour21.GetComponent<ButtonHandler>();
+            n0h.value = 25;
+        }
+        if (neightbour22 != null)
+        {
+            ButtonHandler n0h = neightbour22.GetComponent<ButtonHandler>();
+            n0h.value = 25;
+        }
+        if (neightbour23 != null)
+        {
+            ButtonHandler n0h = neightbour23.GetComponent<ButtonHandler>();
+            n0h.value = 25;
+        }
+        if (neightbour8 != null)
+        {
+            ButtonHandler n0h = neightbour8.GetComponent<ButtonHandler>();
+            n0h.value = 25;
         }
     }
 
