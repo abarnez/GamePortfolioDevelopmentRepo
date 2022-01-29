@@ -14,10 +14,11 @@ public class SC_FPSController : MonoBehaviour
     public Camera playerCamera;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
-    public GameObject gameCanvas;
+    public float Delay = 3.0f;
+    public GameObject gameCanvas, goCanvas;
     public bool gcActive, ScanMode, ExtractMode;
-    public int Scans, Extractions;
-    public Text buttonText, scansText;
+    public int Scans, Extractions, Score;
+    public Text buttonText, scansText, extractText, scoreText, finalScoreText;
 
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
@@ -29,6 +30,7 @@ public class SC_FPSController : MonoBehaviour
     void Start()
     {
         Scans = 6;
+        Extractions = 3;
         characterController = GetComponent<CharacterController>();
         //gameCanvas.SetActive(false);
         // Lock cursor
@@ -41,6 +43,9 @@ public class SC_FPSController : MonoBehaviour
     void Update()
     {
         scansText.text = "Scans Remaining: " + Scans;
+        extractText.text = "Extractions Remaining: " + Extractions;
+        scoreText.text = "Score: " + Score;
+        finalScoreText.text = "Final Score: " + Score;
         // We are grounded, so recalculate move direction based on axes
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
@@ -105,6 +110,15 @@ public class SC_FPSController : MonoBehaviour
         if (ScanMode)
         {
             buttonText.text = "Scan Mode";
+        }
+        if(Extractions == 0)
+        {
+            Delay -= Time.deltaTime;
+            if (Delay < 0)
+            {
+                gameCanvas.SetActive(false);
+                goCanvas.SetActive(true);
+            }
         }
     }
 

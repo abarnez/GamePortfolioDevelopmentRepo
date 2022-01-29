@@ -12,9 +12,11 @@ public class ButtonHandler : MonoBehaviour
     public SC_FPSController playerController;
     public GameObject player;
     public int value;
+    public bool uncovered;
     // Start is called before the first frame update
     void Start()
-    {            
+    {
+        uncovered = false;
         player = GameObject.FindGameObjectWithTag("Player");
         playerController = player.GetComponent<SC_FPSController>();
         self = gameObject.GetComponent<Button>();
@@ -134,54 +136,203 @@ public class ButtonHandler : MonoBehaviour
         {
             gameObject.GetComponent<Image>().color = Color.magenta;
         }
-    }
-
-    void onClick()
-    {
-      
-        if (playerController.Scans > 0)
+        if (value < 25)
         {
-            if (neightbour0 != null)
-            {
-                // neightbour0.SetActive(false);
-               // neightbour0.GetComponent<Image>().enabled = false;
-              //  neightbour0.GetComponentInChildren<Image>().enabled = false;
-                neightbour0.transform.GetChild(0).gameObject.SetActive(false);
-            }
-            if (neightbour1 != null)
-            {
-                neightbour1.transform.GetChild(0).gameObject.SetActive(false);
-            }
-            if (neightbour2 != null)
-            {
-                neightbour2.transform.GetChild(0).gameObject.SetActive(false);
-            }
-            if (neightbour3 != null)
-            {
-                neightbour3.transform.GetChild(0).gameObject.SetActive(false);
-            }
-            if (neightbour4 != null)
-            {
-                neightbour4.transform.GetChild(0).gameObject.SetActive(false);
-            }
-            if (neightbour5 != null)
-            {
-                neightbour5.transform.GetChild(0).gameObject.SetActive(false);
-            }
-            if (neightbour6 != null)
-            {
-                neightbour6.transform.GetChild(0).gameObject.SetActive(false);
-            }
-            if (neightbour7 != null)
-            {
-                neightbour7.transform.GetChild(0).gameObject.SetActive(false);
-            }
-            gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            playerController.Scans--;
+            value = 0;
+            gameObject.GetComponent<Image>().color = Color.white;
         }
 
     }
 
+    void onClick()
+    {
+        if (playerController.ScanMode)
+        {
+            if (playerController.Scans > 0)
+            {
+                if (neightbour0 != null)
+                {
+                    neightbour0.transform.GetChild(0).gameObject.SetActive(false);
+                    ButtonHandler n0h = neightbour0.GetComponent<ButtonHandler>();
+                    n0h.uncovered = true;
+                }
+                if (neightbour1 != null)
+                {
+                    neightbour1.transform.GetChild(0).gameObject.SetActive(false);
+                    ButtonHandler n0h = neightbour1.GetComponent<ButtonHandler>();
+                    n0h.uncovered = true;
+                }
+                if (neightbour2 != null)
+                {
+                    neightbour2.transform.GetChild(0).gameObject.SetActive(false);
+                    ButtonHandler n0h = neightbour2.GetComponent<ButtonHandler>();
+                    n0h.uncovered = true;
+                }
+                if (neightbour3 != null)
+                {
+                    neightbour3.transform.GetChild(0).gameObject.SetActive(false);
+                    ButtonHandler n0h = neightbour3.GetComponent<ButtonHandler>();
+                    n0h.uncovered = true;
+                }
+                if (neightbour4 != null)
+                {
+                    neightbour4.transform.GetChild(0).gameObject.SetActive(false);
+                    ButtonHandler n0h = neightbour4.GetComponent<ButtonHandler>();
+                    n0h.uncovered = true;
+                }
+                if (neightbour5 != null)
+                {
+                    neightbour5.transform.GetChild(0).gameObject.SetActive(false);
+                    ButtonHandler n0h = neightbour5.GetComponent<ButtonHandler>();
+                    n0h.uncovered = true;
+                }
+                if (neightbour6 != null)
+                {
+                    neightbour6.transform.GetChild(0).gameObject.SetActive(false);
+                    ButtonHandler n0h = neightbour6.GetComponent<ButtonHandler>();
+                    n0h.uncovered = true;
+                }
+                if (neightbour7 != null)
+                {
+                    neightbour7.transform.GetChild(0).gameObject.SetActive(false);
+                    ButtonHandler n0h = neightbour7.GetComponent<ButtonHandler>();
+                    n0h.uncovered = true;
+                }
+                gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                uncovered = true;
+                playerController.Scans--;
+            }
+        }
+        if (playerController.ExtractMode && uncovered)
+        {
+            if (playerController.Extractions > 0)
+            {
+                if (neightbour0 != null)
+                {
+                    ButtonHandler n0h = neightbour0.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour1 != null)
+                {
+                    ButtonHandler n0h = neightbour1.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour2 != null)
+                {
+                    ButtonHandler n0h = neightbour2.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour3 != null)
+                {
+                    ButtonHandler n0h = neightbour3.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour4 != null)
+                {
+                    ButtonHandler n0h = neightbour4.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour5 != null)
+                {
+                    ButtonHandler n0h = neightbour5.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour6 != null)
+                {
+                    ButtonHandler n0h = neightbour6.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour7 != null)
+                {
+                    ButtonHandler n0h = neightbour7.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour9 != null)
+                {
+                    ButtonHandler n0h = neightbour9.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour10 != null)
+                {
+                    ButtonHandler n0h = neightbour10.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour11 != null)
+                {
+                    ButtonHandler n0h = neightbour11.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour12 != null)
+                {
+                    ButtonHandler n0h = neightbour12.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour13 != null)
+                {
+                    ButtonHandler n0h = neightbour13.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour14 != null)
+                {
+                    ButtonHandler n0h = neightbour14.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour15 != null)
+                {
+                    ButtonHandler n0h = neightbour15.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour16 != null)
+                {
+                    ButtonHandler n0h = neightbour16.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour17 != null)
+                {
+                    ButtonHandler n0h = neightbour17.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour18 != null)
+                {
+                    ButtonHandler n0h = neightbour18.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour19 != null)
+                {
+                    ButtonHandler n0h = neightbour19.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour20 != null)
+                {
+                    ButtonHandler n0h = neightbour20.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour21 != null)
+                {
+                    ButtonHandler n0h = neightbour21.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour22 != null)
+                {
+                    ButtonHandler n0h = neightbour22.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour23 != null)
+                {
+                    ButtonHandler n0h = neightbour23.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                if (neightbour8 != null)
+                {
+                    ButtonHandler n0h = neightbour8.GetComponent<ButtonHandler>();
+                    n0h.value = n0h.value / 2;
+                }
+                playerController.Extractions--;
+                playerController.Score += value;
+                value = 0;
+            }
+        }
+    }
     void populateNeighborsValue()
     {
         //first

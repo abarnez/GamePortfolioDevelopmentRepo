@@ -16,8 +16,8 @@ public class GridCreator : MonoBehaviour
         {
             Debug.Log(i + 995);
         }
-            //rand1 = Random.Range(2,65);  
-            rand1 = 1; 
+            
+        rand1 = Random.Range(0, 1025); 
         rand2 = Random.Range(0,1025);  
         rand3 = Random.Range(0,1025);  
         rand4 = Random.Range(0,1025);  
