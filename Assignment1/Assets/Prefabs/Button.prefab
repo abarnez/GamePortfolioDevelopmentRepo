@@ -104,7 +104,7 @@ RectTransform:
   m_GameObject: {fileID: 3029686720620941949}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 3029686720047412341}
   m_Father: {fileID: 0}
@@ -217,6 +217,24 @@ MonoBehaviour:
   neightbour5: {fileID: 0}
   neightbour6: {fileID: 0}
   neightbour7: {fileID: 0}
+  neightbour8: {fileID: 0}
+  neightbour9: {fileID: 0}
+  neightbour10: {fileID: 0}
+  neightbour11: {fileID: 0}
+  neightbour12: {fileID: 0}
+  neightbour13: {fileID: 0}
+  neightbour14: {fileID: 0}
+  neightbour15: {fileID: 0}
+  neightbour16: {fileID: 0}
+  neightbour17: {fileID: 0}
+  neightbour18: {fileID: 0}
+  neightbour19: {fileID: 0}
+  neightbour20: {fileID: 0}
+  neightbour21: {fileID: 0}
+  neightbour22: {fileID: 0}
+  neightbour23: {fileID: 0}
   self: {fileID: 0}
   playerController: {fileID: 0}
   player: {fileID: 0}
+  value: 0
+  uncovered: 0
