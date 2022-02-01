@@ -32,12 +32,9 @@ public class SC_FPSController : MonoBehaviour
         Scans = 6;
         Extractions = 3;
         characterController = GetComponent<CharacterController>();
-        //gameCanvas.SetActive(false);
-        // Lock cursor
-        //  Cursor.lockState = CursorLockMode.Locked;
-        //  Cursor.visible = false;
         ScanMode = false;
         ExtractMode = true;
+        gcActive = false;
     }
 
     void Update()
@@ -65,9 +62,6 @@ public class SC_FPSController : MonoBehaviour
             moveDirection.y = movementDirectionY;
         }
 
-        // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
-        // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
-        // as an acceleration (ms^-2)
         if (!characterController.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;
@@ -87,15 +81,19 @@ public class SC_FPSController : MonoBehaviour
                 transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
             }
         }
-
-        if (gcActive)
+        if (gameCanvas != null)
         {
-            gameCanvas.SetActive(true);
+            if (gcActive)
+            {
+                gameCanvas.SetActive(true);
+            }
+            else
+            {
+                gameCanvas.SetActive(false);
+            }
+            
         }
-        else
-        {
-            gameCanvas.SetActive(false);
-        }
+      
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -116,8 +114,10 @@ public class SC_FPSController : MonoBehaviour
             Delay -= Time.deltaTime;
             if (Delay < 0)
             {
+                if(gameCanvas != null)
                 gameCanvas.SetActive(false);
-                goCanvas.SetActive(true);
+                if (goCanvas != null)
+                    goCanvas.SetActive(true);
             }
         }
     }
@@ -126,5 +126,13 @@ public class SC_FPSController : MonoBehaviour
     {
         ScanMode = !ScanMode;
         ExtractMode = !ExtractMode;
+    }
+
+    public void closeScreen()
+    {
+        Destroy(goCanvas.gameObject);
+        Destroy(gameCanvas.gameObject);
+        gcActive = false;
+
     }
 }
