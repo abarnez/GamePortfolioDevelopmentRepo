@@ -10,7 +10,7 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rand = Random.Range(-181, 180);
+        rand = Random.Range(0, 180);
         allowance = 2;
         keyHealth = 10;
     }
@@ -18,36 +18,39 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
-        if (transform.rotation.eulerAngles.z <= rand + allowance)
-        {
-            if (transform.rotation.eulerAngles.z >= rand - allowance)
+       
+            if (transform.rotation.eulerAngles.z <= rand + allowance)
             {
-                if (Input.GetKey(KeyCode.A))
+                if (transform.rotation.eulerAngles.z >= rand - allowance)
                 {
-                    keyHole.transform.Rotate(new Vector3(0, 50, 0) * Time.deltaTime);
-                    Debug.Log(transform.rotation.eulerAngles.z);
+                    if (Input.GetKey(KeyCode.A))
+                    {
+                        keyHole.transform.Rotate(new Vector3(0, 50, 0) * Time.deltaTime);
+                        Debug.Log(transform.rotation.eulerAngles.z);
 
-                }
-                if (Input.GetKey(KeyCode.D))
-                {
-                    keyHole.transform.Rotate(new Vector3(0, -50, 0) * Time.deltaTime);
-                    Debug.Log(transform.rotation.eulerAngles.z);
+                    }
+                    if (Input.GetKey(KeyCode.D))
+                    {
+                        keyHole.transform.Rotate(new Vector3(0, -50, 0) * Time.deltaTime);
+                        Debug.Log(transform.rotation.eulerAngles.z);
+                    }
                 }
             }
-            else
-            {
-                if (Input.GetKey(KeyCode.A))
-                {
-                    keyHealth -= Time.deltaTime;
+        
 
-                }
-                if (Input.GetKey(KeyCode.D))
-                {
-                    keyHealth -= Time.deltaTime;
-                }
+        else
+        {
+            if (Input.GetKey(KeyCode.A))
+            {
+                keyHealth -= Time.deltaTime;
+
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                keyHealth -= Time.deltaTime;
             }
         }
+        
         //rotation
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 5.23f;
@@ -57,6 +60,8 @@ public class NewBehaviourScript : MonoBehaviour
         mousePos.y = mousePos.y - objectPos.y;
 
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        if (angle > 0 && angle < 180) {
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        }
     }
 }
