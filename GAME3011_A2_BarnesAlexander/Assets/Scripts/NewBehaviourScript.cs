@@ -5,27 +5,46 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     public GameObject keyHole;
+    public int rand, allowance;
+    public float keyHealth;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rand = Random.Range(-181, 180);
+        allowance = 2;
+        keyHealth = 10;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.rotation.eulerAngles.z <= 90 + 1)
+     
+        if (transform.rotation.eulerAngles.z <= rand + allowance)
         {
-            if (transform.rotation.eulerAngles.z >= 90 - 1) {
+            if (transform.rotation.eulerAngles.z >= rand - allowance)
+            {
                 if (Input.GetKey(KeyCode.A))
                 {
                     keyHole.transform.Rotate(new Vector3(0, 50, 0) * Time.deltaTime);
                     Debug.Log(transform.rotation.eulerAngles.z);
+
                 }
                 if (Input.GetKey(KeyCode.D))
                 {
                     keyHole.transform.Rotate(new Vector3(0, -50, 0) * Time.deltaTime);
                     Debug.Log(transform.rotation.eulerAngles.z);
+                }
+            }
+            else
+            {
+                if (Input.GetKey(KeyCode.A))
+                {
+                    keyHealth -= Time.deltaTime;
+
+                }
+                if (Input.GetKey(KeyCode.D))
+                {
+                    keyHealth -= Time.deltaTime;
                 }
             }
         }
