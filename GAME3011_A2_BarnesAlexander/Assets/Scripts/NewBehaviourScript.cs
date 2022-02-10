@@ -5,20 +5,21 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     public GameObject keyHole;
-    public int rand, allowance;
-    public float keyHealth;
+    public int rand, allowance, playerSkill;
+    public float keyHealth, Timer;
     // Start is called before the first frame update
     void Start()
     {
         rand = Random.Range(0, 180);
         allowance = 2;
         keyHealth = 10;
+        Timer = 60.0F;
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        Timer -= Time.deltaTime;
             if (transform.rotation.eulerAngles.z <= rand + allowance)
             {
                 if (transform.rotation.eulerAngles.z >= rand - allowance)
@@ -36,7 +37,11 @@ public class NewBehaviourScript : MonoBehaviour
                     }
                 }
             }
-        
+        if(keyHole.transform.rotation.eulerAngles.x > 177 || keyHole.transform.rotation.eulerAngles.x < 0)
+        {
+            Debug.Log("Open");
+            resetLock();
+        }
 
         else
         {
@@ -63,5 +68,14 @@ public class NewBehaviourScript : MonoBehaviour
         if (angle > 0 && angle < 180) {
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         }
+    }
+
+
+    void resetLock()
+    {
+        rand = Random.Range(0, 180);
+        keyHealth = 10;
+        Timer = 60.0F;
+        keyHole.transform.rotation = Quaternion.Euler(new Vector3(90, 0, 0));
     }
 }
