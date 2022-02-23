@@ -910,8 +910,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21.9, y: 34}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -17.8, y: 34}
+  m_SizeDelta: {x: 193.4, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1049883962
 MonoBehaviour:
@@ -1322,10 +1322,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyHole: {fileID: 584739724}
   rand: 0
-  allowance: 0
   playerSkill: 0
+  difficultyLevel: 0
+  keys: 0
   keyHealth: 0
   Timer: 0
+  allowance: 0
+  timer: {fileID: 1049883962}
+  keyHP: {fileID: 1986873377}
+  keysLeft: {fileID: 1228700992}
+  pSkill: {fileID: 2027708664}
+  Difficulty: {fileID: 366395251}
 --- !u!1 &2027708662
 GameObject:
   m_ObjectHideFlags: 0
