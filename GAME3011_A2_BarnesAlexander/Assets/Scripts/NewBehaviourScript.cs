@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public GameObject keyHole;
+    public GameObject keyHole, goObject;
     public int rand, playerSkill, difficultyLevel, keys;
     public float keyHealth, Timer, allowance;
     public Text timer, keyHP, keysLeft, pSkill, Difficulty;
@@ -16,7 +16,8 @@ public class NewBehaviourScript : MonoBehaviour
         rand = Random.Range(0, 180);
         keys = 3;
         keyHealth = 10;
-        Timer = 60.0F;
+        Timer = 30.0F;
+        playerSkill = 1;
     }
 
     // Update is called once per frame
@@ -52,7 +53,7 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.A))
             {
-                keyHealth -= Time.deltaTime;
+                keyHealth -= Time.deltaTime / playerSkill;
                 if (keyHealth < 0)
                 {
                     breakKey();
@@ -61,7 +62,7 @@ public class NewBehaviourScript : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.D))
             {
-                keyHealth -= Time.deltaTime;
+                keyHealth -= Time.deltaTime / playerSkill;
                 if (keyHealth < 0)
                 {
                     breakKey();
@@ -75,6 +76,10 @@ public class NewBehaviourScript : MonoBehaviour
             resetLock();
         }
 
+        if(Timer < 0 || keys == 0)
+        {
+            gameOver();
+        }
         //rotation
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 5.23f;
@@ -95,13 +100,14 @@ public class NewBehaviourScript : MonoBehaviour
         playerSkill += 1;
         difficultyLevel = Random.Range(0, 4);
         rand = Random.Range(0, 180);
-        Timer = 60.0F;
+        Timer = 30.0F;
         keyHole.transform.rotation = Quaternion.Euler(new Vector3(90, 0, 0));
     }
 
     void gameOver()
     {
-
+        goObject.SetActive(true);
+        Time.timeScale = 0;
     }
 
     void breakKey()
