@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class NewBehaviourScript : MonoBehaviour
@@ -12,7 +13,8 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        difficultyLevel = Random.Range(0, 4);
+        Time.timeScale = 1.0F;
+        difficultyLevel = 0;
         rand = Random.Range(0, 180);
         keys = 3;
         keyHealth = 10;
@@ -114,5 +116,9 @@ public class NewBehaviourScript : MonoBehaviour
     {
         keys -= 1;
         keyHealth = 10;
+    }
+
+    public void playAgain(){
+        SceneManager.LoadScene("SampleScene");
     }
 }
