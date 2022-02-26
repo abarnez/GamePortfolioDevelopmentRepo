@@ -24,6 +24,7 @@ public class GameController : MonoBehaviour
         {
             Swap();
         }
+
     }
 
     void Swap()
