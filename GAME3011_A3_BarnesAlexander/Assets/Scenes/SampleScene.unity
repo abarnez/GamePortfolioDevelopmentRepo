@@ -162,6 +162,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 1459453181}
   Neighbour3: {fileID: 0}
   Neighbour4: {fileID: 942933083}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -169,6 +170,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &11296763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,6 +326,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 1778352058}
   Neighbour3: {fileID: 0}
   Neighbour4: {fileID: 1973441179}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -328,6 +334,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &23254113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,6 +490,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 0}
   Neighbour3: {fileID: 958400497}
   Neighbour4: {fileID: 394908073}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -487,6 +498,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &24146251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -718,6 +733,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 1001945013}
   Neighbour3: {fileID: 365076481}
   Neighbour4: {fileID: 407170300}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -725,6 +741,10 @@ MonoBehaviour:
   Onen: 1
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &132666454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -956,6 +976,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 2061021403}
   Neighbour3: {fileID: 1778352058}
   Neighbour4: {fileID: 794999882}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -963,6 +984,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &273603566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1194,6 +1219,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 969841301}
   Neighbour3: {fileID: 0}
   Neighbour4: {fileID: 1778352058}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -1201,6 +1227,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &309141108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1432,6 +1462,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 0}
   Neighbour3: {fileID: 969841301}
   Neighbour4: {fileID: 2061021403}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -1439,6 +1470,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &331677177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1611,6 +1646,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 0}
   Neighbour3: {fileID: 0}
   Neighbour4: {fileID: 0}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -1618,6 +1654,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &336873373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1908,6 +1948,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 1471654411}
   Neighbour3: {fileID: 273603564}
   Neighbour4: {fileID: 2018362844}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -1915,6 +1956,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &365076483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2067,6 +2112,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 24146249}
   Neighbour3: {fileID: 1001945013}
   Neighbour4: {fileID: 1266252397}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -2074,6 +2120,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &394908075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2305,6 +2355,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 132666452}
   Neighbour3: {fileID: 2018362844}
   Neighbour4: {fileID: 942933083}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -2312,6 +2363,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &407170302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2642,6 +2697,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 0}
   Neighbour3: {fileID: 0}
   Neighbour4: {fileID: 1143251725}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -2649,6 +2705,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &562351185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3041,6 +3101,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 2018362844}
   Neighbour3: {fileID: 954861065}
   Neighbour4: {fileID: 0}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -3048,6 +3109,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &664268339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3371,6 +3436,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 273603564}
   Neighbour3: {fileID: 23254111}
   Neighbour4: {fileID: 954861065}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -3378,6 +3444,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &794999884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3688,6 +3758,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 407170300}
   Neighbour3: {fileID: 664268337}
   Neighbour4: {fileID: 0}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -3695,6 +3766,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &942933085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3908,6 +3983,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 794999882}
   Neighbour3: {fileID: 1973441179}
   Neighbour4: {fileID: 0}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -3915,6 +3991,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &954861067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4067,6 +4147,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 0}
   Neighbour3: {fileID: 1864585716}
   Neighbour4: {fileID: 1001945013}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -4074,6 +4155,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &958400499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4289,6 +4374,8 @@ MonoBehaviour:
   tile4: {fileID: 0}
   pos1: {x: 0, y: 0, z: 0}
   pos2: {x: 0, y: 0, z: 0}
+  pScore: 0
+  pScoreText: {fileID: 1956438185}
 --- !u!1 &969841301
 GameObject:
   m_ObjectHideFlags: 0
@@ -4348,6 +4435,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 0}
   Neighbour3: {fileID: 0}
   Neighbour4: {fileID: 309141106}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -4355,6 +4443,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &969841304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4487,6 +4579,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 958400497}
   Neighbour3: {fileID: 1471654411}
   Neighbour4: {fileID: 132666452}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -4494,6 +4587,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &1001945015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4745,6 +4842,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 562351182}
   Neighbour3: {fileID: 0}
   Neighbour4: {fileID: 1563500411}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -4752,6 +4850,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &1143251728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5222,6 +5324,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 394908073}
   Neighbour3: {fileID: 132666452}
   Neighbour4: {fileID: 1459453181}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -5229,6 +5332,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &1266252400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5440,6 +5547,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 1266252397}
   Neighbour3: {fileID: 407170300}
   Neighbour4: {fileID: 11296761}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -5447,6 +5555,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &1459453183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5599,6 +5711,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 1864585716}
   Neighbour3: {fileID: 2061021403}
   Neighbour4: {fileID: 365076481}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -5606,6 +5719,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &1471654413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6015,6 +6132,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 1143251725}
   Neighbour3: {fileID: 336873370}
   Neighbour4: {fileID: 0}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -6022,6 +6140,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &1563500414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6230,6 +6352,7 @@ RectTransform:
   - {fileID: 23254116}
   - {fileID: 309141111}
   - {fileID: 969841302}
+  - {fileID: 1956438184}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6435,6 +6558,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 309141106}
   Neighbour3: {fileID: 0}
   Neighbour4: {fileID: 23254111}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -6442,6 +6566,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &1778352060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6614,6 +6742,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 0}
   Neighbour3: {fileID: 331677175}
   Neighbour4: {fileID: 1471654411}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -6621,6 +6750,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &1864585719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6938,6 +7071,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1956438183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1956438184}
+  - component: {fileID: 1956438186}
+  - component: {fileID: 1956438185}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1956438184
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956438183}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1635688560}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -148, y: -123}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1956438185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956438183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &1956438186
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956438183}
+  m_CullTransparentMesh: 0
 --- !u!1 &1973441179
 GameObject:
   m_ObjectHideFlags: 0
@@ -6977,6 +7189,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 23254111}
   Neighbour3: {fileID: 0}
   Neighbour4: {fileID: 0}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -6984,6 +7197,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &1973441181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7136,6 +7353,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 365076481}
   Neighbour3: {fileID: 794999882}
   Neighbour4: {fileID: 664268337}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -7143,6 +7361,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &2018362846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7453,6 +7675,7 @@ MonoBehaviour:
   Neighbour2: {fileID: 331677175}
   Neighbour3: {fileID: 309141106}
   Neighbour4: {fileID: 273603564}
+  gc: {fileID: 0}
   n1n: 0
   n2n: 0
   n3n: 0
@@ -7460,6 +7683,10 @@ MonoBehaviour:
   Onen: 0
   Twon: 0
   canPop: 0
+  ones: 0
+  twos: 0
+  threes: 0
+  fours: 0
 --- !u!114 &2061021405
 MonoBehaviour:
   m_ObjectHideFlags: 0

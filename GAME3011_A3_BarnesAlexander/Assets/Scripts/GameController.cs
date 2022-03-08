@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
     public GameObject tile1, tile2, tile3, tile4;
     public Vector3 pos1, pos2;
+    public int pScore;
+    public Text pScoreText;
     TileScript t1, t2;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +23,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        pScoreText.text = "Score: " + pScore;
         if(t1.SelectedB && t2.SelectedB)
         {
             Swap();
