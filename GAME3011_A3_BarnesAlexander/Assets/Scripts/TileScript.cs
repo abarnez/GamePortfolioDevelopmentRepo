@@ -7,10 +7,10 @@ public class TileScript : MonoBehaviour
 {
     public bool SelectedB;
     public int Value, numNeighbours = 0;
-    public GameObject Neighbour1, Neighbour2, Neighbour3, Neighbour4, gc;
+    public GameObject Neighbour1, Neighbour2, Neighbour3, Neighbour4, gc, Outline;
     GameController gcs;
     TileScript ts1, ts2, ts3, ts4;
-    public int n1n, n2n, n3n, n4n;
+    public int n1n, n2n, n3n, n4n, tempint1, tempint2;
     public bool Onen, Twon, canPop, ones, twos, threes, fours;
     Image Tile;
     // Start is called before the first frame update
@@ -181,17 +181,88 @@ public class TileScript : MonoBehaviour
         {
             canPop = true;
         }
-     
 
+        if (SelectedB)
+        {
+            Outline.gameObject.SetActive(true);
+        } else
+        {
+            Outline.gameObject.SetActive(false);
+        }
+
+        if (canPop)
+        {
+            SelectedB = false;
+        }
 
     }
 
     public void Selected()
     {
+        if (SelectedB)
+        {
+            if(ts1 != null)
+            {
+                if (ts1.SelectedB)
+                {
+                    tempint1 = Value;
+                    tempint2 = ts1.Value;
+                    Value = tempint2;
+                    ts1.Value = tempint1;
+                    SelectedB = false;
+                    ts1.SelectedB = false;
+                }
+            }
+            if (ts2 != null)
+            {
+                if (ts2.SelectedB)
+                {
+                    tempint1 = Value;
+                    tempint2 = ts2.Value;
+                    Value = tempint2;
+                    ts2.Value = tempint1;
+                    SelectedB = false;
+                    ts2.SelectedB = false;
+                }
+            }
+            if (ts3 != null)
+            {
+                if (ts3.SelectedB)
+                {
+                    tempint1 = Value;
+                    tempint2 = ts3.Value;
+                    Value = tempint2;
+                    ts3.Value = tempint1;
+                    SelectedB = false;
+                    ts3.SelectedB = false;
+                }
+            }
+            if (ts4 != null)
+            {
+                if (ts4.SelectedB)
+                {
+                    tempint1 = Value;
+                    tempint2 = ts4.Value;
+                    Value = tempint2;
+                    ts4.Value = tempint1;
+                    SelectedB = false;
+                    ts4.SelectedB = false;
+                }
+            }
+        }
+       
         if (canPop)
+        {
             Pop();
 
-        canPop = false;
+            canPop = false;
+        } else
+        {
+            SelectedB = !SelectedB;
+        }
+       
+     
+        
     }
 
     public void Pop()
