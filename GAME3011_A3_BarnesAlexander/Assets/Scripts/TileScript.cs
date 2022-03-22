@@ -13,9 +13,11 @@ public class TileScript : MonoBehaviour
     public int n1n, n2n, n3n, n4n, tempint1, tempint2;
     public bool Onen, Twon, canPop, ones, twos, threes, fours;
     Image Tile;
+    AudioSource audioData;
     // Start is called before the first frame update
     void Start()
     {
+        audioData = GetComponent<AudioSource>();
         gc = GameObject.FindGameObjectWithTag("MainCamera");
         gcs = gc.GetComponent<GameController>();
 
@@ -267,7 +269,7 @@ public class TileScript : MonoBehaviour
 
     public void Pop()
     {
-        
+        audioData.Play(0);
         canPop = false;
         if (ones)
         {
