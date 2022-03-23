@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TileScript : MonoBehaviour
 {
     public bool SelectedB;
-    public int Value, numNeighbours = 0;
+    public int Value, numNeighbours = 0, max;
     public GameObject Neighbour1, Neighbour2, Neighbour3, Neighbour4, gc, Outline;
     GameController gcs;
     TileScript ts1, ts2, ts3, ts4;
@@ -17,11 +17,12 @@ public class TileScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        max = 4;
         audioData = GetComponent<AudioSource>();
         gc = GameObject.FindGameObjectWithTag("MainCamera");
         gcs = gc.GetComponent<GameController>();
 
-        Value = Random.Range(0, 4);
+        Value = Random.Range(0, max);
         Tile = gameObject.GetComponent<Image>();
         if (Value == 1)
         {
@@ -38,6 +39,11 @@ public class TileScript : MonoBehaviour
         if (Value == 0)
         {
             Tile.color = Color.cyan;
+        }
+
+        if (Value == 4)
+        {
+            Tile.color = Color.yellow;
         }
 
         if (Neighbour1 != null)
@@ -78,6 +84,10 @@ public class TileScript : MonoBehaviour
         if (Value == 0)
         {
             Tile.color = Color.cyan;
+        }
+        if (Value == 4)
+        {
+            Tile.color = Color.yellow;
         }
 
         if (Neighbour1 != null)
@@ -304,8 +314,13 @@ public class TileScript : MonoBehaviour
 
    public void random()
     {
-        Value = Random.Range(0, 4);
+        Value = Random.Range(0, max);
         gcs.pScore += 10;
+    }
+
+    public void changeDiff()
+    {
+        Value = Random.Range(0, max);       
     }
 
 
