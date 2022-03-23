@@ -75,7 +75,7 @@ public class GameController : MonoBehaviour
         {
             TileScript ts;
             ts = tiles[i].gameObject.GetComponent<TileScript>();
-            ts.max = 5;
+            ts.max = 6;
             ts.changeDiff();
             pScore = 0;
             tScore = 1000;

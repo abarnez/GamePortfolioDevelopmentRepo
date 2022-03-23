@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class TileScript : MonoBehaviour
 {
     public bool SelectedB;
+    public float Timer;
     public int Value, numNeighbours = 0, max;
-    public GameObject Neighbour1, Neighbour2, Neighbour3, Neighbour4, gc, Outline;
+    public GameObject Neighbour1, Neighbour2, Neighbour3, Neighbour4, gc, Outline, Cover;
     GameController gcs;
     TileScript ts1, ts2, ts3, ts4;
     public int n1n, n2n, n3n, n4n, tempint1, tempint2;
-    public bool Onen, Twon, canPop, ones, twos, threes, fours;
+    public bool Onen, Twon, canPop, ones, twos, threes, fours, cantMove;
     Image Tile;
     AudioSource audioData;
     // Start is called before the first frame update
@@ -45,6 +46,11 @@ public class TileScript : MonoBehaviour
         {
             Tile.color = Color.yellow;
         }
+        if (Value == 5)
+        {
+            Tile.color = Color.black;
+            cantMove = true;
+        }
 
         if (Neighbour1 != null)
         {
@@ -69,6 +75,12 @@ public class TileScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Timer -= Time.deltaTime;
+        if (Timer < 0)
+        {
+            Cover.SetActive(false);
+        }
+
         if (Value == 1)
         {
             Tile.color = Color.blue;
@@ -88,6 +100,12 @@ public class TileScript : MonoBehaviour
         if (Value == 4)
         {
             Tile.color = Color.yellow;
+        }
+
+        if (Value == 5)
+        {
+            Tile.color = Color.black;
+            cantMove = true;
         }
 
         if (Neighbour1 != null)
@@ -211,105 +229,111 @@ public class TileScript : MonoBehaviour
 
     public void Selected()
     {
-        if (SelectedB)
+        if (!cantMove)
         {
-            if(ts1 != null)
+            if (SelectedB)
             {
-                if (ts1.SelectedB)
+                if (ts1 != null)
                 {
-                    tempint1 = Value;
-                    tempint2 = ts1.Value;
-                    Value = tempint2;
-                    ts1.Value = tempint1;
-                    SelectedB = false;
-                    ts1.SelectedB = false;
+                    if (ts1.SelectedB)
+                    {
+                        tempint1 = Value;
+                        tempint2 = ts1.Value;
+                        Value = tempint2;
+                        ts1.Value = tempint1;
+                        SelectedB = false;
+                        ts1.SelectedB = false;
+                    }
+                }
+                if (ts2 != null)
+                {
+                    if (ts2.SelectedB)
+                    {
+                        tempint1 = Value;
+                        tempint2 = ts2.Value;
+                        Value = tempint2;
+                        ts2.Value = tempint1;
+                        SelectedB = false;
+                        ts2.SelectedB = false;
+                    }
+                }
+                if (ts3 != null)
+                {
+                    if (ts3.SelectedB)
+                    {
+                        tempint1 = Value;
+                        tempint2 = ts3.Value;
+                        Value = tempint2;
+                        ts3.Value = tempint1;
+                        SelectedB = false;
+                        ts3.SelectedB = false;
+                    }
+                }
+                if (ts4 != null)
+                {
+                    if (ts4.SelectedB)
+                    {
+                        tempint1 = Value;
+                        tempint2 = ts4.Value;
+                        Value = tempint2;
+                        ts4.Value = tempint1;
+                        SelectedB = false;
+                        ts4.SelectedB = false;
+                    }
                 }
             }
-            if (ts2 != null)
-            {
-                if (ts2.SelectedB)
-                {
-                    tempint1 = Value;
-                    tempint2 = ts2.Value;
-                    Value = tempint2;
-                    ts2.Value = tempint1;
-                    SelectedB = false;
-                    ts2.SelectedB = false;
-                }
-            }
-            if (ts3 != null)
-            {
-                if (ts3.SelectedB)
-                {
-                    tempint1 = Value;
-                    tempint2 = ts3.Value;
-                    Value = tempint2;
-                    ts3.Value = tempint1;
-                    SelectedB = false;
-                    ts3.SelectedB = false;
-                }
-            }
-            if (ts4 != null)
-            {
-                if (ts4.SelectedB)
-                {
-                    tempint1 = Value;
-                    tempint2 = ts4.Value;
-                    Value = tempint2;
-                    ts4.Value = tempint1;
-                    SelectedB = false;
-                    ts4.SelectedB = false;
-                }
-            }
-        }
-       
-        if (canPop)
-        {
-            Pop();
 
-            canPop = false;
-        } else
-        {
-            SelectedB = !SelectedB;
+            if (canPop)
+            {
+                Pop();
+
+                canPop = false;
+            }
+            else
+            {
+                SelectedB = !SelectedB;
+            }
+
         }
-       
-     
         
     }
 
     public void Pop()
     {
-        audioData.Play(0);
-        canPop = false;
-        if (ones)
+        if (!cantMove)
         {
-            if(ts1.numNeighbours>=2)
-            ts1.tPop();
+            audioData.Play(0);
+            canPop = false;
+            if (ones)
+            {
+                if (ts1.numNeighbours >= 2)
+                    ts1.tPop();
 
-           // ts1.random();
-        }
-        if (twos)
-        {
-            
+                // ts1.random();
+            }
+            if (twos)
+            {
+
                 ts2.rPop();
 
-          //  ts2.random();
-        }
-        if (threes)
-        {
-            ts3.bPop();
-           // ts3.random();
-        }
-        if (fours)
-        {
-            if (ts4.numNeighbours >= 2)
-                ts4.lPop();
+                //  ts2.random();
+            }
+            if (threes)
+            {
+                ts3.bPop();
+                // ts3.random();
+            }
+            if (fours)
+            {
+                if (ts4.numNeighbours >= 2)
+                    ts4.lPop();
 
-           // ts4.random();
+                // ts4.random();
+            }
+
+
+            random();
         }
-
-
-        random();
     }
 
    public void random()
