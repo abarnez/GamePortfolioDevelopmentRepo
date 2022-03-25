@@ -5,19 +5,23 @@ using UnityEngine.UI;
 
 public class TileScript : MonoBehaviour
 {
-    public bool SelectedB;
+    bool SelectedB;
     public float Timer;
-    public int Value, numNeighbours = 0, max;
+    int Value, numNeighbours = 0; 
+    public int max;
     public GameObject Neighbour1, Neighbour2, Neighbour3, Neighbour4, gc, Outline, Cover;
     GameController gcs;
     TileScript ts1, ts2, ts3, ts4;
-    public int n1n, n2n, n3n, n4n, tempint1, tempint2;
-    public bool Onen, Twon, canPop, ones, twos, threes, fours, cantMove;
+    int n1n, n2n, n3n, n4n, tempint1, tempint2;
+    bool canPop, ones, twos, threes, fours, cantMove;
     Image Tile;
     AudioSource audioData;
+    public Image fruit;
+    public Sprite apple, cherry, mango, orange, grape;
     // Start is called before the first frame update
     void Start()
     {
+        
         max = 4;
         audioData = GetComponent<AudioSource>();
         gc = GameObject.FindGameObjectWithTag("MainCamera");
@@ -28,23 +32,28 @@ public class TileScript : MonoBehaviour
         if (Value == 1)
         {
             Tile.color = Color.blue;
+            fruit.sprite = grape;
         }
         if (Value == 2)
         {
             Tile.color = Color.red;
+            fruit.sprite = apple;
         }
         if (Value == 3)
         {
             Tile.color = Color.green;
+            fruit.sprite = cherry;
         }
         if (Value == 0)
         {
             Tile.color = Color.cyan;
+            fruit.sprite = orange;
         }
 
         if (Value == 4)
         {
             Tile.color = Color.yellow;
+            fruit.sprite = mango;
         }
         if (Value == 5)
         {
@@ -84,22 +93,28 @@ public class TileScript : MonoBehaviour
         if (Value == 1)
         {
             Tile.color = Color.blue;
+            fruit.sprite = grape;
         }
         if (Value == 2)
         {
             Tile.color = Color.red;
+            fruit.sprite = apple;
         }
         if (Value == 3)
         {
             Tile.color = Color.green;
+            fruit.sprite = cherry;
         }
         if (Value == 0)
         {
             Tile.color = Color.cyan;
+            fruit.sprite = orange;
         }
+
         if (Value == 4)
         {
             Tile.color = Color.yellow;
+            fruit.sprite = mango;
         }
 
         if (Value == 5)
