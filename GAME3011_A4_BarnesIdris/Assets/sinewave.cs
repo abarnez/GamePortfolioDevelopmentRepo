@@ -6,6 +6,7 @@ public class sinewave : MonoBehaviour
 {
     public float ampliute = 1;
     public float frequency = 1;
+    public float speed = 1;
     public LineRenderer myLine;
     public bool pCheck;
     public int Points;
@@ -21,6 +22,13 @@ public class sinewave : MonoBehaviour
             frequency += Random.Range(0.0f, 1.0f);
         }
     }
+    public void Reset()
+    {
+        ampliute = 1.0f;
+        frequency = 0.5f;
+        ampliute += Random.Range(-1.0f, 1.0f);
+        frequency += Random.Range(0.0f, 1.0f);
+    }
     void Draw()
     {
         float xStart = 0;
@@ -32,7 +40,7 @@ public class sinewave : MonoBehaviour
         {
             float progress = (float)currentPoint / (Points - 1);
             float x = Mathf.Lerp(xStart, xFinish, progress);
-            float y = ampliute * Mathf.Sin(tau * frequency * x + Time.timeSinceLevelLoad);
+            float y = ampliute * Mathf.Sin(tau * frequency * x + Time.timeSinceLevelLoad * speed);
             myLine.SetPosition(currentPoint, new Vector3(x, y, 0));
         }
     }
