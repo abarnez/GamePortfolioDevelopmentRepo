@@ -40,7 +40,7 @@ public class sinewave : MonoBehaviour
         {
             float progress = (float)currentPoint / (Points - 1);
             float x = Mathf.Lerp(xStart, xFinish, progress);
-            float y = ampliute * Mathf.Sin(tau * frequency * x + Time.timeSinceLevelLoad * speed);
+            float y = ampliute * Mathf.Sin(tau * frequency * x + Time.time * speed);
             myLine.SetPosition(currentPoint, new Vector3(x, y, 0));
         }
     }
