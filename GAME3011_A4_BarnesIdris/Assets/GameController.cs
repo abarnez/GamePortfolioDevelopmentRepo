@@ -1,8 +1,16 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
+[System.Serializable]
+public enum Difficulty
+{
+    EASY,
+    MEDIUM,
+    HARD
+}
 
 public class GameController : MonoBehaviour
 {
@@ -10,8 +18,10 @@ public class GameController : MonoBehaviour
     public sinewave pWave, hWave;
     public float gameTimer, allowance, waveTimer, sensFreq, sensAmp, pskReducerAmp, pskReducerFreq, pSkill;
     public int difficulty;
+    public Difficulty difficulti = Difficulty.EASY;
     public bool MatchA, MatchB;
     public GameObject gameOverCanvas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +41,7 @@ public class GameController : MonoBehaviour
         playerSkillText.text = "Player Skill: " + pSkill + "/5";
         pskReducerAmp = pSkill / 1000;
         pskReducerFreq = pSkill / 10000;
-        gameTimer -= Time.deltaTime;
+        gameTimer -= Time.deltaTime; 
         waveTimer -= Time.deltaTime;
         if(waveTimer <= -5)
         {
@@ -89,36 +99,36 @@ public class GameController : MonoBehaviour
        
         }
        
-            if(pWave.ampliute >= hWave.ampliute - allowance)
+        if(pWave.ampliute >= hWave.ampliute - allowance)
+        {
+            if (pWave.ampliute <= hWave.ampliute + allowance)
             {
-                if (pWave.ampliute <= hWave.ampliute + allowance)
-                {
-                    MatchA = true;
-                }
-                else
-                {
-                    MatchA = false;
-                }
+                MatchA = true;
             }
             else
             {
                 MatchA = false;
             }
-            if (pWave.frequency >= hWave.frequency - allowance)
+        }
+        else
+        {
+            MatchA = false;
+        }
+        if (pWave.frequency >= hWave.frequency - allowance)
+        {
+            if (pWave.frequency <= hWave.frequency + allowance)
             {
-                if (pWave.frequency <= hWave.frequency + allowance)
-                {
-                    MatchB = true;
-                }
-                else
-                {
-                    MatchB = false;
-                }
+                MatchB = true;
             }
             else
             {
                 MatchB = false;
             }
+        }
+        else
+        {
+            MatchB = false;
+        }
         if (Input.GetKeyDown(KeyCode.H))
         {
             if (MatchA && MatchB)
@@ -140,5 +150,38 @@ public class GameController : MonoBehaviour
         hWave.Reset();
         if(pSkill < 5)
         pSkill += 1;
+    }
+
+    void SetDifficulty()
+    {
+        switch(difficulti)
+        {
+            case Difficulty.EASY:
+                difficultyText.text = "Difficulty: Easy";
+                allowance = 0.15f;
+                pWave.speed = 1f;
+                hWave.speed = 1f;
+                break;
+            case Difficulty.MEDIUM:
+                difficultyText.text = "Difficulty: Medium";
+                allowance = 0.1f;
+                pWave.speed = 5f;
+                hWave.speed = 5f;
+                break;
+            case Difficulty.HARD:
+                difficultyText.text = "Difficulty: Hard";
+                allowance = 0.01f;
+                if (waveTimer > 0)
+                {
+                    pWave.speed = 10f;
+                    hWave.speed = 10f;
+                } 
+                else
+                {
+                    pWave.speed = -10f;
+                    hWave.speed = -10f;
+                }
+                break;
+        }
     }
 }
