@@ -1,0 +1,31 @@
+I got the inspiration for the hacking mini game from the hacking feature in splinter cell double agent. 
+I believe the idea behind it is there is a “signal” (just a sine wave) that you are trying to hack. 
+And you do this by replicating the target “signal” with our own. 
+
+
+
+The system has 5 inputs that change 2 values. 
+A and D will adjust the signals frequency. 
+W and S will adjust the signals amplitude. Once you feel like your hacking signal is a good enough match press H to hack. 
+(After designing this system it became apparent it was originally intended for controller input only) 
+
+
+
+There are three levels of difficulty in the system:
+
+
+
+Easy - slow moving signal with generous allowance (allowance just meaning your signal doesn’t have to match 100%)
+
+
+
+Medium - medium moving signal with moderate allowance
+
+
+
+Hard - fast moving signal that occasionally changes directions with low allowance 
+
+
+
+The player gains “skill” after every successful hack. As the player skill increases, 
+the sensitivity of the inputs for adjusting the waves become lowered - thus making it easier to get a more precise match. 
